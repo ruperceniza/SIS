@@ -4,8 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Grades Report</title>
-<link rel="stylesheet" href="sis.css">
 <style>
+  body {
+    overflow: hidden;
+    padding: 20px;  /* top, right, bottom, left */
+    font-family: "lucia grande", tahoma, verdana, arial, sans-serif;
+    font-size: 12px;
+    }
   .grades-heading {
     font-size: 24px; /* Example size, adjust as needed */
     font-weight: bold;
@@ -18,19 +23,17 @@
     border-collapse: collapse;
   }
   th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #ffffff;
     padding: 8px;
     text-align: left;
   }
-  th {
-    background-color: #f2f2f2;
-  }
+
   tr:nth-child(even) {
     background-color: #f9f9f9;
   }
   .legend {
     font-size: 0.8em;
-    color: #666;
+    color: #333333;
     margin-top: 10px;
   }
   .button {
@@ -58,11 +61,28 @@
   .print-link:hover {
     text-decoration: underline;
   }
+  .qpi-alignment {
+  text-align: right;
+  }
+  #second-table .subj-cell, #second-table .desc-cell, #second-table .prel-cell, 
+  #second-table .mid-cell, #second-table .pref-cell, #second-table .final-cell, 
+  #second-table .unit-cell, #second-table .cred-cell {
+  background-color: #00000080;
+  color: #ffffff;
+  /* other styles */
+}
+#first-table td, #first-table th, #sec-table-secrow, #sec-table-fourtrow, #qpi-table {
+  background-color: #00000010;
+}
+#sec-table-firsrow, #sec-table-thirdrow, #sec-table-fifthrow {
+  background-color: #0000001b;
+}
+
 </style>
 </head>
 <body>
 <div class="grades-heading">My Grades</div>
-<table>
+<table id = "first-table">
     <tr>
         <th>Code:</th>
         <td>126273</td>
@@ -73,11 +93,11 @@
       </tr>
       <tr>
         <th>Student Name:</th>
-        <td>DE JESUS, DWIGHT IAN MAGNO</td>
+        <td class = "name-cell">DE JESUS, DWIGHT IAN MAGNO</td>
         <th>Division:</th>
-        <td>CS</td>
+        <td class = "cs-cell">CS</td>
         <th>Section:</th>
-        <td>ComSc 4-A</td>
+        <td class = "comsc-cell">ComSc 4-A</td>
       </tr>
       <tr>
         <th>RGC No:</th>
@@ -100,71 +120,71 @@
 <hr>
 
 <table>
-  <tr>
-    <th>SUBJ. NO.</th>
-    <th>DESCRIPTIVE TITLE</th>
-    <th>PRELIM</th>
-    <th>MIDTERM</th>
-    <th>PRE-FINAL</th>
-    <th>FINAL</th>
-    <th>UNITS</th>
-    <th>CREDIT TO</th>
+  <tr id = "second-table">
+    <th class = "subj-cell">SUBJ. NO.</th>
+    <th class = "desc-cell">DESCRIPTIVE TITLE</th>
+    <th class = "prel-cell">PRELIM</th>
+    <th class = "mid-cell">MIDTERM</th>
+    <th class = "pref-cell">PRE-FINAL</th>
+    <th class = "final-cell">FINAL</th>
+    <th class = "unit-cell">UNITS</th>
+    <th class = "cred-cell">CREDIT TO</th>
   </tr>
   <!-- Repeat this row for each subject -->
-  <tr>
+  <tr id = "sec-table-firsrow">
     <td>CS 4253</td>
     <td>SENIOR'S INTEGRATION PROGRAM</td>
     <td></td> <!-- Grades would be inserted here -->
     <td></td>
     <td></td>
-    <td>D</td>
+    <th>D</th>
     <td>3.00</td>
     <td></td>
   </tr>
-  <tr>
+  <tr id = "sec-table-secrow">
     <td>CS 4253</td>
     <td>SOCIAL ISSUES AND PROFESSIONAL PRACTICE</td>
     <td></td> <!-- Grades would be inserted here -->
     <td></td>
     <td></td>
-    <td>D</td>
+    <th>D</th>
     <td>3.00</td>
     <td></td>
   </tr>
-  <tr>
+  <tr id = "sec-table-thirdrow">
     <td>CS 4253</td>
     <td>CS ELECTIVE 4</td>
     <td></td> <!-- Grades would be inserted here -->
     <td></td>
     <td></td>
-    <td>B</td>
+    <th>B</th>
     <td>3.00</td>
     <td></td>
   </tr>
-  <tr>
+  <tr id = "sec-table-fourtrow">
     <td>CS 4253</td>
     <td>ARCHITECTURE AND ORGANIZATION</td>
     <td></td> <!-- Grades would be inserted here -->
     <td></td>
     <td></td>
-    <td>F</td>
+    <th>B+</th>
     <td>3.00</td>
     <td></td>
   </tr>
-  <tr>
+  <tr id = "sec-table-fifthrow">
     <td>CS 4253</td>
     <td>INFORMATION ASSURANCE AND SECURITY 1</td>
     <td></td> <!-- Grades would be inserted here -->
     <td></td>
     <td></td>
-    <td>C+</td>
+    <th>C+</th>
     <td>3.00</td>
     <td></td>
   </tr>
 </tr>
-<tr>
+<tr id = "qpi-table">
   <td></td>
-  <td>Quality Point Index (Q.P.I.) or Weighted Percentage Average (W.P.A.) =</td>
+  <th class="qpi-alignment">Quality Point Index (Q.P.I.) or Weighted Percentage Average (W.P.A.) =</th>
   <td></td> <!-- Grades would be inserted here -->
   <td></td>
   <td></td>
