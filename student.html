@@ -77,6 +77,37 @@
 #sec-table-firsrow, #sec-table-thirdrow, #sec-table-fifthrow {
   background-color: #0000001b;
 }
+.wpa-text {
+  display: block;
+}
+.italic-text, .italic-text-grade {
+  font-style: italic;
+}
+.font-color-red {
+  color: #ff0000;
+  font-weight: bold;
+}
+.bold-text-grade, .print-text {
+  font-weight: bold;
+}
+.pending-icon {
+  width: 17px;
+  height: auto;
+  vertical-align: middle;
+}
+.flask-icon {
+  width: 11px;
+  height: auto;
+  vertical-align: middle;
+}
+.print-icon {
+  width: 17px;
+  height: auto;
+}
+.prevreg-icon {
+  width: 145px;
+  height: auto;
+}
 
 </style>
 </head>
@@ -184,7 +215,8 @@
 </tr>
 <tr id = "qpi-table">
   <td></td>
-  <th class="qpi-alignment">Quality Point Index (Q.P.I.) or Weighted Percentage Average (W.P.A.) =</th>
+  <th class="qpi-alignment">Quality Point Index (Q.P.I.)<br>
+    <span class = "wpa-text">or Weighted Percentage Average (W.P.A.) =</span></th>
   <td></td> <!-- Grades would be inserted here -->
   <td></td>
   <td></td>
@@ -198,30 +230,24 @@
 <div class="legend">
   <p>Legend:</p>
   <ul>
-    <li>n/a (not available) - Please see finance office.</li>
-    <li>GRADE - Not yet verified</li>
-    <li>GRADE - Failed</li>
-    <li>GRADE - Passed</li>
-    <li>/ - You have a pending lecture evaluation for this subject.</li>
-    <li>Δ - You have a pending laboratory evaluation for this subject.</li>
+    <li><span class = "italic-text">n/a (not available)</span> - Please see finance office.</li>
+    <li><span class = "italic-text-grade">GRADE</span> - Not yet verified</li>
+    <li><span class = "font-color-red">GRADE</span> - Failed</li>
+    <li><span class = "bold-text-grade">GRADE</span> - Passed</li>
+    <li><img src ="https://sis.addu.edu.ph/sites/all/modules/accounts/images/lecture.png" class ="pending-icon"> - You have a pending lecture evaluation for this subject.</li>
+    <li><img src = "https://sis.addu.edu.ph/sites/all/modules/accounts/images/laboratory.png" class = "flask-icon"> - You have a pending laboratory evaluation for this subject.</li>
   </ul>
 </div>
 
 <hr>
 
 <!-- Link for printing the grade -->
-<a href="print-grade.html" class="print-link">Print 2nd Semester, 2021-2022 Grade</a>
+<span><img src = "images/image-printer.png" class="print-icon"><span class = "print-text">Print 2nd Semester, 2021-2022 Grade</span></span>
 
 <!-- Button for previous registration -->
-<button class="button" onclick="goToPreviousRegistration()">Previous Registration</button>
-
-<script>
-  function goToPreviousRegistration() {
-    // Here you would put the code to navigate to the previous registration.
-    // For example, it might look something like this:
-    window.location.href = 'previous-registration.html';
-  }
-</script>
-
+<!--<button class="button" onclick="goToPreviousRegistration()">Previous Registration</button>-->
+<div class = "prev-reg-button">
+  <img src = "images/prev-reg.png" class = "prevreg-icon">
+</div>
 </body>
 </html>
