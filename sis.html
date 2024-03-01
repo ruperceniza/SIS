@@ -4,7 +4,117 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="sis.css">
+<style>
+  body{
+    font-family: Tahoma, Verdana, Arial, sans-serif;;
+  }
+  #sis_header {
+  background-color: #3b5998;
+  color: white;
+  padding: 10px;
+  overflow: auto;
+}
+
+.sis_logo {
+  float: left;
+  margin-left: 80px;
+}
+
+.sis_logo img {
+  height: 55px;
+  margin-right: 20px;
+}
+
+.sis_header_content {
+  float: left;
+  width: 400px;
+  margin-top: 10px;
+}
+
+.sis_header_title a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sis_header_slogan {
+  font-size: 11px;
+}
+
+
+.sis_profile_links a {
+  text-decoration: none; 
+  font-size: 11px;
+}
+
+.sis_profile_links ul {
+  list-style-type: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding, especially on the left */
+}
+
+
+.sis_profile {
+  overflow: auto; 
+  margin-top: 20px;
+}
+
+
+
+
+.sis_profile_picture {
+  float: left; 
+  margin-right: 20px;
+}
+
+.sis_profile_name{
+  color: #3b5998;
+  font-size: 15px;
+  font-weight: bold;
+} 
+
+.sis_profile_edit {
+  color: #3b5998;
+  font-size: 11px;
+}
+
+.task {
+  color: #999;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 10px;
+
+}
+
+.sidebar-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-left a {
+  display: block; 
+  padding: 5px; 
+  text-decoration: none; 
+  color: #000000; 
+  font-size: 11px;
+}
+
+.grades-title {
+  color: #3b5998;
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.main-title {
+  color: #3b5998;
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    
+}
+</style>
 </head>
 <body>
 
@@ -38,7 +148,7 @@
 <div class="task"> TASK</div>
 
 <div class="sidebar-left">
-    <a href="list.html" target="_self">Submit a Grade</a>
+    <a href="list.html" target="_self">Submit Grades</a>
     <a href="student.html" target="_self">My Grades</a>
 </div>
 </body>
