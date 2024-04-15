@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit Grades</title>
+<style>
+body {
+  padding: 20px;  /* top, right, bottom, left */
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 15px;
+}
+.header-section {
+  border: 1.5px solid #000000; 
+  padding: 20px; /* This adds space inside the border. Adjust the value as needed */
+  margin: 20px; /* This adds space outside the border. Adjust the value as needed */
+  background-color: #f9f9f9; 
+  
+}
+
+.grade-guidelines {
+  margin-top: 20px;
+  font-weight: 100;
+}
+
+.grade-guidelines li {
+  margin-bottom: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ffffff;
+  padding: 8px;
+  text-align: left;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+
+select, input[type="text"] {
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
+  padding: 2px;
+  height: 25px;
+  width: auto;
+}
+
+select {
+  cursor: pointer;
+}
+
+#first-table-top, #first-table-top .first-table-code
+#first-table-top .first-table-sched, #first-table-top .first-table-acad
+#first-table-top .first-table-grad {
+  background-color: #00000010;
+}
+
+.code-row {
+  background-color: #00000080;
+  color: #ffffff;
+}
+
+.row-one-b {
+  background-color: #0000001b;
+}
+
+.row-one-a {
+  background-color: #00000010;
+}
+
+select {
+  background-color: white;
+  border: 1px solid #000000;
+  padding: 5px;
+  margin: 0;
+  height: 30px; /* Adjust the height to fit your design */
+  width: 160px; /* Adjust the width as necessary */
+}
+
+</style>
+</head>
+<body>
+
+<div class="header-section">
+    <table id = "first-table-top">
+        <tr>
+          <th class = "first-table-code">Code/Subject:</th>
+          <td>4-114/IT 2241 - EVENT-DRIVEN PROGRAMMING</td>
+        </tr>
+        <tr>
+          <th class = "first-table-sched">Schedule:</th>
+          <td>2:05PM-4:35PM F605 TH</td>
+        </tr>
+        <tr>
+          <th class = "first-table-acad">Academic Period:</th>
+          <td>2nd Semester 2023-2024</td>
+        </tr>
+        <tr>
+          <th class = "first-table-grad">Grading Period:</th>
+          <td>Final</td>
+        </tr>
+      </table>
+    
+<hr>
+
+<div class="grade-guidelines">
+  <h3>Grade Encoding Guidelines</h3>
+  <ol>
+    <li>Grades in the NEW Grading System must be encoded as A,B+,B,C+,C,D,F,FD,WP.</li>
+    <li>Non FYPD Grades in the OLD Grading System must be from 65 to 100</li>
+    <li>FYPD Grades in the OLD Grading System must be encoded as A,B+,C+,C,D,F,FD,WP.</li>
+    <li>FYDP Grades in the OLD Grading System must be encoded as O - Outstanding, HS - Highly Satisfactory, S - Satisfactory, MS - Moderately Satisfactory, F- Fair, P - Poor.</li>
+    <li>NE Grades will not be accepted. Students who have not taken exams must be provided the minimum grade. After the exam has been taken, the teacher should file a grade correction form at the Registrar's Office.</li>
+    <li>Select AUD for Audit students.</li>
+  </ol>
+</div>
+
+<table>
+  <thead>
+    <tr class = "code-row">
+      <th>CODE</th>
+      <th>STUDENT NAME</th>
+      <th>FINAL</th>
+      <th>GRD. TYPE</th>
+      <th>YEAR LVL</th>
+      <th>ACAD. STATUS</th>
+      <th>YR. OF ENTRY</th>
+      <th>ENTRY YR. LVL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class = "row-one-b">
+        <td>136194</td>
+        <td>ALCAIDE, HANNAH BEA REYES</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>2</td>
+        <td>Regular</td>
+        <td>2021</td>
+        <td>1</td>
+    </tr>
+    <tr class = "row-one-a">
+        <td>128852</td>
+        <td>AÑO, JESUS RICARDO TEJANO</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>3</td>
+        <td>Regular</td>
+        <td>2019</td>
+        <td>1</td>
+    </tr>
+    <tr class = "row-one-b">
+        <td>142104</td>
+        <td>ARAPOC, BEATRICE JAN GOMEZ</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>2</td>
+        <td>Regular</td>
+        <td>2022</td>
+        <td>1</td>
+    </tr>
+    <tr class = "row-one-a">
+        <td>133118</td>
+        <td>BELEN, HALEY MACKENZIE UBALDE</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>2</td>
+        <td>Regular</td>
+        <td>2020</td>
+        <td>1</td>
+    </tr>
+    <tr class = "row-one-b">
+        <td>144272</td>
+        <td>DAGATAN, TRISTAN KYLE MALNEGRO</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>1</td>
+        <td>Regular</td>
+        <td>2022</td>
+        <td>1</td>
+    </tr>
+    <tr class = "row-one-a">
+        <td>142744</td>
+        <td>DOBLI, FERDINAND JOHN FRANCISCO</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>1</td>
+        <td>Regular</td>
+        <td>2022</td>
+        <td>1</td>
+    </tr>
+    <tr class = "row-one-b">
+        <td>129322</td>
+        <td>LABRADOR, THONY DANIELLE ALIBANGBANG</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>2</td>
+        <td>Regular</td>
+        <td>2019</td>
+        <td>1</td>
+    </tr>
+    <tr class = "row-one-a">
+        <td>143804</td>
+        <td>LANAJA, CHRIS LAWRENCE JUAN</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>2</td>
+        <td>Regular</td>
+        <td>2022</td>
+        <td>1</td>
+    </tr>
+    <tr class = "row-one-b">
+        <td>132703</td>
+        <td>MIRAFLOR, RIZEL KENT ESCOBAR</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>2</td>
+        <td>Regular</td>
+        <td>2020</td>
+        <td>1</td>
+    </tr>
+    <tr class = "row-one-a">
+        <td>141743</td>
+        <td>NATIVIDAD, KARL JUSTIN ANGELO SALON</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>2</td>
+        <td>Regular</td>
+        <td>2022</td>
+        <td>1</td>
+    </tr>
+    <tr class = "row-one-b">
+        <td>142608</td>
+        <td>OPERARIO, RAPHAEL MIGUEL DIZON</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>2</td>
+        <td>Regular</td>
+        <td>2022</td>
+        <td>1</td>
+    </tr>
+    <tr class = "row-one-a">
+        <td>146083</td>
+        <td>PIMENTEL, JOB AARON TAN</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>2</td>
+        <td>Regular</td>
+        <td>2020</td>
+        <td>1</td>
+    </tr>
+    <tr class = "row-one-b">
+        <td>137565</td>
+        <td>PUSTA, TISHA RYLE SAYMAN</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>2</td>
+        <td>Regular</td>
+        <td>2021</td>
+        <td>1</td>
+    </tr>
+    <tr class = "row-one-a">
+        <td>128848</td>
+        <td>QUIANZON, EDWARD ANTHONY RIVAS</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>2</td>
+        <td>Regular</td>
+        <td>2019</td>
+        <td>1</td>
+    </tr>
+    <tr class = "row-one-b">
+        <td>129749</td>
+        <td>VENERACION, ISIAH GILMORE BUENAFLOR</td>
+        <td>
+            <select>
+              <option value=""></option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="FD">FD</option>
+              <option value="WP">WP</option>
+            </select>
+          </td>
+          
+        <td>NEW</td>
+        <td>2</td>
+        <td>Regular</td>
+        <td>2019</td>
+        <td>1</td>
+    </tr>
+</tbody>
+</table>
+</body>
+</html>

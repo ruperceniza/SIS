@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grades Report</title>
+<style>
+  body {
+    overflow: hidden;
+    padding: 20px;  /* top, right, bottom, left */
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 12px;
+    }
+  .grades-heading {
+    font-size: 24px; /* Example size, adjust as needed */
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px; /* Spacing below the heading */
+    color: #3b5998;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #ffffff;
+    padding: 8px;
+    text-align: left;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  .legend {
+    font-size: 0.8em;
+    color: #333333;
+    margin-top: 10px;
+  }
+  .button {
+    background-color: #3b5998;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: block; /* Make the button a block element to fill the container */
+    font-size: 16px;
+    margin: 4px 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .print-link {
+    color: #000000;
+    text-decoration: none;
+    display: block; /* Make the link a block element to fill the container */
+    margin: 4px 0;
+    padding: 10px 15px;
+  }
+
+  .print-link:hover {
+    text-decoration: underline;
+  }
+  .qpi-alignment {
+  text-align: right;
+  }
+  #second-table .subj-cell, #second-table .desc-cell, #second-table .prel-cell, 
+  #second-table .mid-cell, #second-table .pref-cell, #second-table .final-cell, 
+  #second-table .unit-cell, #second-table .cred-cell {
+  background-color: #00000080;
+  color: #ffffff;
+  /* other styles */
+}
+#first-table td, #first-table th, #sec-table-secrow, #sec-table-fourtrow, #qpi-table {
+  background-color: #00000010;
+}
+#sec-table-firsrow, #sec-table-thirdrow, #sec-table-fifthrow {
+  background-color: #0000001b;
+}
+.wpa-text {
+  display: block;
+}
+.italic-text, .italic-text-grade {
+  font-style: italic;
+}
+.font-color-red {
+  color: #ff0000;
+  font-weight: bold;
+}
+.bold-text-grade, .print-text {
+  font-weight: bold;
+}
+.pending-icon {
+  width: 17px;
+  height: auto;
+  vertical-align: middle;
+}
+.flask-icon {
+  width: 11px;
+  height: auto;
+  vertical-align: middle;
+}
+.print-icon {
+  width: 17px;
+  height: auto;
+}
+.prevreg-icon {
+  width: 145px;
+  height: auto;
+}
+
+</style>
+</head>
+<body>
+<div class="grades-heading">My Grades</div>
+<table id = "first-table">
+    <tr>
+        <th>Code:</th>
+        <td>126273</td>
+        <th>Course:</th>
+        <td>BS-COMPSC</td>
+        <th>Year:</th>
+        <td>4</td>
+      </tr>
+      <tr>
+        <th>Student Name:</th>
+        <td class = "name-cell">DE JESUS, DWIGHT IAN MAGNO</td>
+        <th>Division:</th>
+        <td class = "cs-cell">CS</td>
+        <th>Section:</th>
+        <td class = "comsc-cell">ComSc 4-A</td>
+      </tr>
+      <tr>
+        <th>RGC No:</th>
+        <td>1548349</td>
+        <th>Academic Period:</th>
+        <td>2nd Semester, 2021-2022</td>
+        <th>Status:</th>
+        <td>Regular</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+        <th>Annual QPI</th>
+        <td>3.900</td>
+        <th></th>
+        <td></td>
+      </tr>
+</table>
+
+<hr>
+
+<table>
+  <tr id = "second-table">
+    <th class = "subj-cell">SUBJ. NO.</th>
+    <th class = "desc-cell">DESCRIPTIVE TITLE</th>
+    <th class = "prel-cell">PRELIM</th>
+    <th class = "mid-cell">MIDTERM</th>
+    <th class = "pref-cell">PRE-FINAL</th>
+    <th class = "final-cell">FINAL</th>
+    <th class = "unit-cell">UNITS</th>
+    <th class = "cred-cell">CREDIT TO</th>
+  </tr>
+  <!-- Repeat this row for each subject -->
+  <tr id = "sec-table-firsrow">
+    <td>CS 4253</td>
+    <td>SENIOR'S INTEGRATION PROGRAM</td>
+    <td></td> <!-- Grades would be inserted here -->
+    <td></td>
+    <td></td>
+    <th>D</th>
+    <td>3.00</td>
+    <td></td>
+  </tr>
+  <tr id = "sec-table-secrow">
+    <td>CS 4253</td>
+    <td>SOCIAL ISSUES AND PROFESSIONAL PRACTICE</td>
+    <td></td> <!-- Grades would be inserted here -->
+    <td></td>
+    <td></td>
+    <th>D</th>
+    <td>3.00</td>
+    <td></td>
+  </tr>
+  <tr id = "sec-table-thirdrow">
+    <td>CS 4253</td>
+    <td>CS ELECTIVE 4</td>
+    <td></td> <!-- Grades would be inserted here -->
+    <td></td>
+    <td></td>
+    <th>B</th>
+    <td>3.00</td>
+    <td></td>
+  </tr>
+  <tr id = "sec-table-fourtrow">
+    <td>CS 4253</td>
+    <td>ARCHITECTURE AND ORGANIZATION</td>
+    <td></td> <!-- Grades would be inserted here -->
+    <td></td>
+    <td></td>
+    <th>B+</th>
+    <td>3.00</td>
+    <td></td>
+  </tr>
+  <tr id = "sec-table-fifthrow">
+    <td>CS 4253</td>
+    <td>INFORMATION ASSURANCE AND SECURITY 1</td>
+    <td></td> <!-- Grades would be inserted here -->
+    <td></td>
+    <td></td>
+    <th>C+</th>
+    <td>3.00</td>
+    <td></td>
+  </tr>
+</tr>
+<tr id = "qpi-table">
+  <td></td>
+  <th class="qpi-alignment">Quality Point Index (Q.P.I.)<br>
+    <span class = "wpa-text">or Weighted Percentage Average (W.P.A.) =</span></th>
+  <td></td> <!-- Grades would be inserted here -->
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>  </td>
+  <td></td>
+</tr>
+  <!-- ... other subjects ... -->
+</table>
+
+<div class="legend">
+  <p>Legend:</p>
+  <ul>
+    <li><span class = "italic-text">n/a (not available)</span> - Please see finance office.</li>
+    <li><span class = "italic-text-grade">GRADE</span> - Not yet verified</li>
+    <li><span class = "font-color-red">GRADE</span> - Failed</li>
+    <li><span class = "bold-text-grade">GRADE</span> - Passed</li>
+    <li><img src ="https://sis.addu.edu.ph/sites/all/modules/accounts/images/lecture.png" class ="pending-icon"> - You have a pending lecture evaluation for this subject.</li>
+    <li><img src = "https://sis.addu.edu.ph/sites/all/modules/accounts/images/laboratory.png" class = "flask-icon"> - You have a pending laboratory evaluation for this subject.</li>
+  </ul>
+</div>
+
+<hr>
+
+<!-- Link for printing the grade -->
+<span><img src = "images/image-printer.png" class="print-icon"><span class = "print-text">Print 2nd Semester, 2021-2022 Grade</span></span>
+
+<!-- Button for previous registration -->
+<!--<button class="button" onclick="goToPreviousRegistration()">Previous Registration</button>-->
+<div class = "prev-reg-button">
+  <img src = "images/prev-reg.png" class = "prevreg-icon">
+</div>
+</body>
+</html>
