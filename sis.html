@@ -4,153 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-<style>
-  body{
-    font-family: Tahoma, Verdana, Arial, sans-serif;;
-  }
-  #sis_header {
-  background-color: #3b5998;
-  color: white;
-  padding: 10px;
-  overflow: auto;
-}
-
-.sis_logo {
-  float: left;
-  margin-left: 80px;
-}
-
-.sis_logo img {
-  height: 55px;
-  margin-right: 20px;
-}
-
-.sis_header_content {
-  float: left;
-  width: 400px;
-  margin-top: 10px;
-}
-
-.sis_header_title a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.sis_header_slogan {
-  font-size: 11px;
-}
-
-
-.sis_profile_links a {
-  text-decoration: none; 
-  font-size: 11px;
-}
-
-.sis_profile_links ul {
-  list-style-type: none; /* Removes default list styling */
-  padding: 0; /* Removes default padding, especially on the left */
-}
-
-
-.sis_profile {
-  overflow: auto; 
-  margin-top: 20px;
-}
-
-
-
-
-.sis_profile_picture {
-  float: left; 
-  margin-right: 20px;
-}
-
-.sis_profile_name{
-  color: #3b5998;
-  font-size: 15px;
-  font-weight: bold;
-} 
-
-.sis_profile_edit {
-  color: #3b5998;
-  font-size: 11px;
-}
-
-.task {
-  color: #999;
-  font-size: 12px;
-  font-weight: bold;
-  margin-top: 10px;
-
-}
-
-.sidebar-left {
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar-left a {
-  display: block; 
-  padding: 5px; 
-  text-decoration: none; 
-  color: #000000; 
-  font-size: 11px;
-}
-
-.grades-title {
-  color: #3b5998;
-  display: block;
-  font-size: 2em;
-  font-weight: bold;
-  text-align: center;
-}
-
-.main-title {
-  color: #3b5998;
-    display: block;
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    
-}
-</style>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-
-  <div id="sis_header">
-    <div class="sis_logo"><img height="55" src="https://sis.addu.edu.ph/sites/default/files/addu_2.png" alt="Home"></div>
-    <div class="sis_header_content">
-        <div class="sis_header_title"><a href="/">STUDENT INFORMATION SYSTEM</a></div>
-        <div class="sis_header_slogan">ATENEO DE DAVAO UNIVERSITY</div>
+<body class="font-sans">
+  <div id="sis_header" class="bg-blue-800 text-white p-2.5 overflow-auto">
+    <div class="sis_logo float-left ml-20">
+      <img src="https://sis.addu.edu.ph/sites/default/files/addu_2.png" alt="Home" class="h-14 mr-5">
     </div>
-</div>
-
-<div class="sis_profile">
-  <div class="sis_profile_picture">
-    <div class="user-picture">
-      <img src="https://media.licdn.com/dms/image/C4D03AQFCOnde_KnDXg/profile-displayphoto-shrink_200_200/0/1653442815227?e=2147483647&v=beta&t=sV5UCpgafsgYUe_aGYU6jwG266d2RXnk5rBYitV6oyI" width="73px" height="70px">
+    <div class="sis_header_content float-left w-100 mt-2.5">
+      <div class="sis_header_title">
+        <a href="/" class="text-white no-underline text-lg">STUDENT INFORMATION SYSTEM</a>
+      </div>
+      <div class="sis_header_slogan text-xs">ATENEO DE DAVAO UNIVERSITY</div>
     </div>
   </div>
+
+  <div class="sis_profile overflow-auto mt-5">
+    <div class="sis_profile_picture float-left mr-5">
+      <img src="https://media.licdn.com/dms/image/C4D03AQFCOnde_KnDXg/profile-displayphoto-shrink_200_200/0/1653442815227?e=2147483647&v=beta&t=sV5UCpgafsgYUe_aGYU6jwG266d2RXnk5rBYitV6oyI" width="73" height="70">
+    </div>
     <div class="sis_profile_links">
-      <ul>
-        <li><a class="sis_profile_name">DWIGHT IAN DE JESUS</a></li>
-        <li><a href="/user/94031/edit" class="sis_profile_edit">Edit My Profile</a></li>
+      <ul class="list-none p-0">
+        <li><a class="sis_profile_name text-blue-800 font-bold text-lg">DWIGHT IAN DE JESUS</a></li>
+        <li><a href="/user/94031/edit" class="sis_profile_edit text-blue-800 text-xs">Edit My Profile</a></li>
       </ul>
     </div>
-    
-    
-    
   </div>
-  <div class="sis_clr_left"></div>
-</div>
 
-<div class="task"> TASK</div>
+  <div class="task text-gray-600 text-sm font-bold mt-2.5">TASK</div>
 
-<div class="sidebar-left">
-  <a href="student.html" target="_self">My Grades</a>
-  <a href="course.html" target="_self">Course List</a>
-    <a href="list.html" target="_self">Submit Grades</a>
-</div>
+  <div class="sidebar-left flex flex-col">
+    <a href="student.html" target="_self" class="block p-1.5 text-black text-xs">My Grades</a>
+    <a href="course.html" target="_self" class="block p-1.5 text-black text-xs">Course List</a>
+    <a href="list.html" target="_self" class="block p-1.5 text-black text-xs">Submit Grades</a>
+  </div>
 </body>
 </html>

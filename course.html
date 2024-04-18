@@ -4,192 +4,99 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Course List</title>
-<style>
-body {
-    font-family: Tahoma, Verdana, Arial, sans-serif;
-    font-size: 12px;
-    padding: 20px;  
-    overflow: hidden;
-}
-
-.container {
-    border: 1.5px solid #000000;
-    margin: 20px;
-    padding: 10px;
-    background-color: #f9f9f9;
-}
-
-.search-container {
-    width: 100%;
-    margin: 0 auto;
-    line-height: 5px;
-}
-
-.results-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 5px;
-}
-
-th, td {
-    border: 1px solid #ffffff;
-}
-
-.results-table th {
-    padding: 8px;
-    text-align: left;
-}
-
-.results-table td {
-    padding: 10px;
-    text-align: left;
-}
-
-.search-again-btn {
-    margin-top: 10px;
-    padding: 3px;
-    padding-left: 8px;
-    padding-right: 8px;
-    background-color: #3b5998;
-    color: #f9f9f9;
-    border: none;
-    cursor: pointer;
-    font-size: 12px;
-    font-style: Tahoma, Verdana, Arial, sans-serif;
-}
-
-h1 {
-    color: #3b5998;
-    margin-left: 17px;
-    font-size: 20px;
-}
-
-.list-header {
-    background: linear-gradient(to right, #00000080, #00000080, #00000080);
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.bolded {
-    font-weight: bold;
-}
-
-.code-row {
-    background-color: #00000080;
-    color: #ffffff;
-}
-
-.available-bold {
-    font-weight: bold;
-    color: #463db3;
-}
-
-.text-bold {
-    font-weight: bold;
-}
-
-.gray-row-one {
-    background-color: #0000001b;
-}
-
-.gray-row-two {
-    background-color: #00000010;
-}
-
-</style>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Search Result</h1>
-    <div class="container">
-        <div class="search-container">
-           <div class="legend">
-                <p><span class = "bolded">A:</span> Available Slots</p>
-                <p><span class = "bolded">S:</span> Total Slots</p>
-                <p><span class = "bolded">R:</span> Reserved</p>
-                <p><span class = "bolded">E:</span> Enrolled</p>
+<body class="font-sans text-sm p-5 overflow-hidden">
+    <h1 class="text-blue-800 ml-4 text-2xl">Search Result</h1>
+    <div class="border border-black mx-5 my-5 p-2.5 bg-gray-100">
+        <div class="w-full mx-auto">
+            <div class="legend">
+                <p class="font-bold"><span>A:</span> Available Slots</p>
+                <p class="font-bold"><span>S:</span> Total Slots</p>
+                <p class="font-bold"><span>R:</span> Reserved</p>
+                <p class="font-bold"><span>E:</span> Enrolled</p>
             </div>
 
-            <div class = "list-header"> LIST OF CLASSES</div>
+            <div class="bg-gradient-to-r from-black to-black text-center text-white py-2.5 font-bold mt-2.5">
+                LIST OF CLASSES
+            </div>
             
-            <div class="results-wrapper">
-                <table class="results-table">
+            <div class="mt-1.5">
+                <table class="w-full border-collapse">
                     <thead>
-                        <tr class = "code-row">
-                            <th>CODE</th>
-                            <th>SUBJECT</th>
-                            <th>DESCRIPTION</th>
-                            <th>DIVISION</th>
-                            <th>Available</th>
-                            <th>Slots</th>
-                            <th>Pre-registered</th>
-                            <th>SCHEDULE</th>
-                            <th>SECTION</th>
-                            <th>TEACHER</th>
+                        <tr class="bg-black text-white">
+                            <th class="border border-white p-2 text-left">CODE</th>
+                            <th class="border border-white p-2 text-left">SUBJECT</th>
+                            <th class="border border-white p-2 text-left">DESCRIPTION</th>
+                            <th class="border border-white p-2 text-left">DIVISION</th>
+                            <th class="border border-white p-2 text-left">Available</th>
+                            <th class="border border-white p-2 text-left">Slots</th>
+                            <th class="border border-white p-2 text-left">Pre-registered</th>
+                            <th class="border border-white p-2 text-left">SCHEDULE</th>
+                            <th class="border border-white p-2 text-left">SECTION</th>
+                            <th class="border border-white p-2 text-left">TEACHER</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class = "gray-row-one">
+                        <tr class="bg-gray-200">
                             <td>4-309</td>
                             <td>CS 2238</td>
                             <td>BASIC ELECTRONICS</td>
                             <td>CS</td>
-                            <td class = "available-bold">33</td>
-                            <td class =  "text-bold">40</td>
+                            <td class="font-bold text-indigo-800">33</td>
+                            <td class="font-bold">40</td>
                             <td></td>
                             <td>* 9:20-10:50 TBA MW * 9:50A-11:50 TBA F *</td>
                             <td>ComSc 2-A</td>
                             <td>PIDOR, RAYMOND</td>
                         </tr>
 
-                        <tr class = "gray-row-two">
+                        <tr class="bg-gray-100">
                             <td>4-310</td>
                             <td>CS 2239</td>
                             <td>SOFTWARE ENGINEERING</td>
                             <td>CS</td>
-                            <td class = "available-bold">11</td>
-                            <td class = "text-bold">40</td>
+                            <td class="font-bold text-indigo-800">11</td>
+                            <td class="font-bold">40</td>
                             <td></td>
                             <td>* 1:00P-10:50P F613E F * 12:25P-1:55P F613E F *</td>
                             <td>ComSc 2-A</td>
                             <td>GONZALES, GENESIS</td>
                         </tr>
 
-                        <tr class = "gray-row-one">
+                        <tr class="bg-gray-100">
                             <td>4-307</td>
                             <td>CS 2240</td>
                             <td>APPLICATIONS DEVELOPMENT AND EMERGING TECHNOLOGIES</td>
                             <td>CS</td>
-                            <td class = "available-bold">16</td>
-                            <td class = "text-bold">40</td>
+                            <td class="font-bold text-indigo-800">16</td>
+                            <td class="font-bold">40</td>
                             <td></td>
-                            <td>* 7:40A-9:40A F613E F * 2:05-3:35 F613E MW *</td>
+                            <td>* 7:40P-9:40A F613E F * 2:05P-3:35 F613E MW *</td>
                             <td>ComSc 2-A</td>
-                            <td>GERALDE, JOHN ROY</td>
+                            <td>GERALDE,JONH ROY</td>
                         </tr>
 
-                        <tr class = "gray-row-two">
+                        <tr class="bg-gray-100">
                             <td>4-308</td>
                             <td>IT 2241</td>
                             <td>EVENT-DRIVEN PROGRAMMING</td>
                             <td>CS</td>
-                            <td class = "available-bold">20</td>
-                            <td class = "text-bold">40</td>
+                            <td class="font-bold text-indigo-800">20</td>
+                            <td class="font-bold">40</td>
                             <td></td>
                             <td>* 5:50P-8:20P F613E TTH *</td>
                             <td>ComSc 2-A</td>
                             <td>BANDOQUILLO, CHRISTIAN</td>
                         </tr>
 
-                        <tr class = "gray-row-one">
+                        <tr class="bg-gray-100">
                             <td>4-311</td>
                             <td>MATH 2272</td>
                             <td>INTEGRAL CALCULUS</td>
                             <td>CS</td>
-                            <td class = "available-bold">10</td>
-                            <td class = "text-bold">40</td>
+                            <td class="font-bold text-indigo-800">10</td>
+                            <td class="font-bold">40</td>
                             <td></td>
                             <td>* 5:50P-8:20P F307 MW *</td>
                             <td>ComSc 2-A</td>
@@ -199,9 +106,8 @@ h1 {
                 </table>
             </div>
             
-            <button class="search-again-btn">Search Again</button>
+            <button class="mt-2.5 py-1 px-2 bg-blue-800 text-white border-none cursor-pointer text-sm font-sans">Search Again</button>
         </div>
     </div>
-    
-    </body>
-    </html>
+</body>
+</html>
